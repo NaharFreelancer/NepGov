@@ -21,7 +21,11 @@ li{
 a {
     text-decoration: none;
 }
-/* Navbar Start */
+
+:root{
+    --white : #fff;
+}
+/* =====Navbar Start =====*/
 .nav__bar{
     display: flex;
     align-items: center;
@@ -60,7 +64,7 @@ h5.nav__title {
     color: #EF4634;
 }
 
-.btn_log {
+a.btn_log {
     margin: 0px 15px;
     color: #3560AD;
     border: 2px solid #3560AD;
@@ -69,20 +73,17 @@ h5.nav__title {
     border-radius: 30px;
     padding:7px 14px;
     display: inline-block; 
+    text-decoration: none;
+    transition: all .5s ease-in-out
 }
 
 .btn_log i {
     margin-right: 5px;
 }
-a.btn_log {
-    text-decoration: none;
-    transition: all .5s ease-in-out;
-
-}
 
 a.btn_log:hover {
   background-color: #3560AD;
-  color: #fff;
+  color:var(--white);
 }
 
 .btn_sign {
@@ -109,9 +110,69 @@ a.btn_sign  {
 }
 
 a.btn_sign:hover{
-background-color: #fff;
+background-color: transparent;
 color: #3560AD;
 }
+
+/* menu bar */
+.menuIcon{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile__menu {
+    position: absolute;
+    height: 100vh;
+    background: #808DA5;
+    width: 50%;
+    top: 0;
+    left: 0;
+    padding: 40px;
+    transform: translateX(-100%);
+    transition: 0.5s ease-in-out;
+}
+
+.open{
+    transform: translateX(0%);
+}
+
+.mobile__menu ul li {
+    margin-bottom: 25px;
+}
+
+.mobile__menu ul li a {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.crossBtn{
+    cursor: pointer;
+}
+/* menu bar */
+
+@media screen and (max-width: 1399px) {
+    .nav__middle ul li{
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .menuIcon{
+        display: block;
+    }
+    .nav__middle, .nav__right{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .mobile__menu{
+        width: 100%;
+    }
+}
+
 
 /* Navbar End */
 
@@ -167,11 +228,13 @@ color: #3560AD;
 
 .three__boxes{
     margin-bottom: 100px;
+    /* display: none; */
 }
 
 .box{
     background-color: #3560AD;
-    width: 413px;
+    width: 100%;
+    max-width: 413px;
     height: 250px;
     padding: 25px 35px;
 }
@@ -188,6 +251,12 @@ color: #3560AD;
     font-weight: 400;
     width: 100%;
     max-width: 325px;
+}
+
+@media screen and (max-width: 767px){
+    .box{
+        margin: auto;
+    }
 }
 
 /* Three  Box End */
