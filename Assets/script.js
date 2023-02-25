@@ -1,14 +1,30 @@
 // nav bar js
+// let menuIcon = document.querySelector('.menuIcon')
+// let crossBtn = document.querySelector('.crossBtn')
+// // let crossBtn = document.getElementsByClassName('crossBtn')
+// let mobile__menu = document.querySelector('.mobile__menu')
+
+// menuIcon.addEventListener('click', function(){
+//     mobile__menu.classList.toggle('open')
+// })
+
+// crossBtn.addEventListener('click', function(){
+//     mobile__menu.classList.remove('open')
+// })
+
 let menuIcon = document.querySelector('.menuIcon')
-let crossBtn = document.querySelector('.crossBtn')
-// let crossBtn = document.getElementsByClassName('crossBtn')
-let mobile__menu = document.querySelector('.mobile__menu')
+
+let crossBtn = document.querySelector ('.crossBtn')
+
+let mobile__menu =document.querySelector('.mobile__menu')
+
 
 menuIcon.addEventListener('click', function(){
     mobile__menu.classList.toggle('open')
 })
 
-crossBtn.addEventListener('click', function(){
+crossBtn.addEventListener('click', function() {
     mobile__menu.classList.remove('open')
 })
+
 
